@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: hudson.model.UpdateCenterTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.464 sec - in hudson.model.UpdateCenterTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.37 sec - in hudson.model.UpdateCenterTest
