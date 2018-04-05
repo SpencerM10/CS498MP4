@@ -226,6 +226,7 @@ public abstract class IdStrategy extends AbstractDescribableImpl<IdStrategy> imp
 
         @Override
         public String idFromFilename(@Nonnull String filename) {
+        	Boolean breakOutter = false;
             if (filename.matches("[a-z0-9_. -]+")) {
                 return filename;
             } else {
@@ -246,29 +247,14 @@ public abstract class IdStrategy extends AbstractDescribableImpl<IdStrategy> imp
                         }
                     } else if (c == '$') {
                         StringBuilder hex = new StringBuilder(4);
-                        i++;
-                        if (i < chars.length) {
-                            hex.append(chars[i]);
-                        } else {
-                            break;
-                        }
-                        i++;
-                        if (i < chars.length) {
-                            hex.append(chars[i]);
-                        } else {
-                            break;
-                        }
-                        i++;
-                        if (i < chars.length) {
-                            hex.append(chars[i]);
-                        } else {
-                            break;
-                        }
-                        i++;
-                        if (i < chars.length) {
-                            hex.append(chars[i]);
-                        } else {
-                            break;
+                        for (int j = 0; j < 4; j++) {
+	                        i++;
+	                        if (i < chars.length) {
+	                            hex.append(chars[i]);
+	                        } else {
+	                        	   breakOutter = true;
+	                            break;
+	                        }
                         }
                         buf.append(Character.valueOf((char)Integer.parseInt(hex.toString(), 16)));
                     }
