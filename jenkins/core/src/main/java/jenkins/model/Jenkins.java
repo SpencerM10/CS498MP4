@@ -699,6 +699,7 @@ public class Jenkins extends AbstractCIBase implements DirectlyModifiableTopLeve
         }
         return instance;
     }
+   
 
     /**
      * Gets the {@link Jenkins} singleton.
@@ -1223,6 +1224,11 @@ public class Jenkins extends AbstractCIBase implements DirectlyModifiableTopLeve
     protected void updateComputerList() {
         updateComputerList(AUTOMATIC_SLAVE_LAUNCH);
     }
+    
+    protected void updateAndTrim() {
+		updateComputerList();
+		trimLabels();
+	}
 
     /** @deprecated Use {@link SCMListener#all} instead. */
     @Deprecated
