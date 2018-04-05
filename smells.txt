@@ -1,0 +1,15 @@
+Q: Discuss with your partner what code smell this is and what refactoring you can apply to remove the repeated statements.
+
+
+A: The code smell is repeated lines. If lines are repeated, it is harder to go back and edit the code. To fix this, you could use the 
+
+"Extract Method" refactoring method.
+
+Q: Do you think that this new 'updateAndTrim' method belongs to 'Nodes' class?
+A: The new 'updateAndTrim' does not belong to the 'Nodes' class. This  method would fit better in the Jenkins class, as it could be useful to any classes that use Jenkins.
+
+Q: Discuss with your partner how to eliminate this repeated code.
+A: This is answered in question 1's answer, use 'Extract Method' refactoring method.
+
+Q: Discuss with your partner how you can eliminate this duplicate code, e.g., by applying the "Extract Method" or another refactoring method.
+A: This is also answered in q1, as you use "Extract Method" to refactor the code and remove repeating lines.
